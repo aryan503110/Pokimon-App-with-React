@@ -10,7 +10,7 @@ function App() {
     async function getData() {
       try {
         const res = await axios.get(
-          "https://pokeapi.co/api/v2/pokemon?limit=1000"
+          "https://pokeapi.co/api/v2/pokemon?limit=200"
         );
         const pokemonDetails = await Promise.all(
           res.data.results.map(async (pokemon) => {
